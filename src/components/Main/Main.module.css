@@ -1,0 +1,122 @@
+.content {
+  width: 436px;
+  height: 977px;
+  background-color: #171c37;
+  position: relative;
+  border-radius: 15px 15px 0px 15px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #171c37;
+  border-radius: 15px 15px 0px 15px;
+  z-index: 100;
+}
+
+.title {
+  color: #d7dae2;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+}
+
+.buttonSize {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/sizeButton.png");
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 21px;
+  right: 27px;
+}
+
+.buttonPopup {
+  position: absolute;
+  top: 23px;
+  left: -49px;
+  width: 50px;
+  height: 50px;
+  background: #4089f6;
+  background-image: url("../../images/popupIcon.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 10px 0px 0px 0px;
+  z-index: 1;
+}
+
+.buttonPage {
+  position: absolute;
+  top: 66px;
+  left: -68px;
+  width: 69px;
+  height: 69px;
+  background-color: #d7dae2;
+  border-radius: 10px 0px 0px 5px;
+  z-index: 1;
+}
+
+.buttonPage::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 15px 18px #d7dae2;
+  z-index: 2;
+}
+
+.buttonPage::after {
+  content: "";
+  position: absolute;
+  top: 69px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  transform: rotate(-90deg);
+  border-radius: 50%;
+  box-shadow: 15px 18px #d7dae2;
+  z-index: 2;
+}
+
+.active {
+  background-color: #171c37;
+}
+
+.active.buttonPage::before {
+  box-shadow: 15px 18px #171c37;
+}
+
+.active.buttonPage::after {
+  box-shadow: 15px 18px #171c37;
+}
+
+.buttonQuestion {
+  position: absolute;
+  top: 142px;
+  right: 0;
+  z-index: -1;
+}
+
+.buttonNotification {
+  position: absolute;
+  top: 221px;
+  right: 0;
+  z-index: -1;
+}
+
+.buttonCall {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  z-index: -1;
+}
