@@ -1,4 +1,5 @@
 import React from 'react';
+import Display from '../Display/Display';
 import main from './Main.module.css';
 
 const Main:React.FC = () => {
@@ -30,6 +31,7 @@ const Main:React.FC = () => {
         fill="#7D8193"/>
       </svg>
       </button>
+      <Display />
     </div>
   );
 }
