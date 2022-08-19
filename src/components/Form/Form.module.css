@@ -1,0 +1,69 @@
+.form {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fieldset {
+  border: none;
+  padding: 0;
+}
+
+.formatting {
+  width: 394px;
+  height: 45px;
+  margin: 0 10px;
+  background: #feffff;
+  box-shadow: 0px 2px 6px rgba(160, 194, 203, 0.63);
+  border-radius: 8px;
+}
+
+.input {
+  width: 394px;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 17.5px;
+  border-radius: 8px;
+  border: none;
+  background: #eeeff3;
+  position: relative;
+}
+
+.inputName {
+  width: 394px;
+  height: 40px;
+  margin: 18px 10px 0 10px;
+}
+
+.inputName::placeholder {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.inputMessage {
+  height: 136px;
+  margin: 18px 10px 0 10px;
+  resize: none;
+  position: relative;
+}
+
+.inputMessage::placeholder {
+  text-align: center;
+  line-height: 132px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.button {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 234px;
+  right: 29px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(37, 142, 195, 0.3);
+  border-radius: 7.5px;
+  border: none;
+  background-image: url("../../images/buttonSubmit.png");
+  background-repeat: no-repeat;
+  background-position: 7px center;
+}
