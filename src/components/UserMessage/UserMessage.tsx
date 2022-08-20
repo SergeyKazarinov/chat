@@ -12,7 +12,6 @@ type messages = {
 
 
 const UserMessage: React.FC<{msgs: messages}> = ({msgs}) => {
-  console.log(msgs)
   return(
     <div className={userMessage.container}>
       <img className={userMessage.icon} src={icon} />

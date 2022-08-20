@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import OtherMessage from "../OtherMessage/OtherMessage";
 import UserMessage from "../UserMessage/UserMessage";
 import messages from './Messages.module.css'
@@ -12,13 +12,19 @@ type arrayMessages = {
 }
 
 const Messages:React.FC<{msgs: Array<arrayMessages>}> = ({msgs}) => {
-  console.log(msgs[0].id)
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+
+    scrollRef.current?.scrollIntoView(false)
+  }, [msgs])
+
   return(
-    <div className={messages.container}>
-      {msgs.map((item: { id: number, isOwn: boolean, name: string, text: string, time: string }) => (
+    <div className={messages.container} ref={scrollRef}>
+      {msgs.map((item: { id: number, isOwn: boolean, name: string, text: string, time: string }, index: number) => (
         item.isOwn == true
-        ? <UserMessage  msgs={item}/>
-        : <OtherMessage msgs={item}/>
+        ? <UserMessage  key={index} msgs={item}/>
+        : <OtherMessage key={index} msgs={item}/>
       ))}
     </div>
   )
