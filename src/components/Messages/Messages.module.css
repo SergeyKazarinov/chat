@@ -4,5 +4,9 @@
   height: 603px;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  overflow: auto;
+}
+
+.container::-webkit-scrollbar {
+  width: 0;
 }

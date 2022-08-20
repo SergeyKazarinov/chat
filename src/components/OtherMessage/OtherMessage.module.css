@@ -2,10 +2,9 @@
   width: 235px;
   height: 64px;
   display: flex;
-  align-self: flex-end;
-  gap: 4px;
   align-items: flex-end;
-  margin-top: 57px;
+  gap: 4px;
+  margin-top: 59px;
 }
 
 .message {
