@@ -2,17 +2,27 @@ import React from "react";
 import userMessage from "./UserMessage.module.css";
 import icon from "../../images/User.png";
 
-const UserMessage: React.FC = () => {
+type messages = {
+  id: number,
+  isOwn: boolean,
+  name: string,
+  text: string,
+  time: string,
+}
+
+
+const UserMessage: React.FC<{msgs: messages}> = ({msgs}) => {
+  console.log(msgs)
   return(
     <div className={userMessage.container}>
       <img className={userMessage.icon} src={icon} />
       <div className={userMessage.message}>
         <div className={userMessage.flex}>
-          <span className={userMessage.name}>Евгений</span>
+          <span className={userMessage.name}>{msgs.name}</span>
           <button type="button" className={userMessage.answer}>ответить</button>
         </div>
-        <p className={userMessage.text}>Хочу программировать</p>
-        <span className={userMessage.time}>15:55</span>
+        <p className={userMessage.text}>{msgs.text}</p>
+        <span className={userMessage.time}>{msgs.time}</span>
       </div>
     </div>
   )

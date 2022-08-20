@@ -1,6 +1,5 @@
 .container {
   width: 235px;
-  height: 64px;
   display: flex;
   align-items: flex-end;
   gap: 4px;
@@ -9,26 +8,12 @@
 
 .message {
   width: 201px;
-  height: 64px;
   background: #eaf3fa;
   border-radius: 5px;
   position: relative;
   display: flex;
   flex-direction: column;
 }
-/* 
-.message::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -20px;
-  width: 10px;
-  height: 10px;
-  background: transparent;
-  transform: rotate(45deg);
-  border-radius: 50%;
-  box-shadow: 15px 18px #000;
-} */
 
 .flex {
   display: flex;
@@ -71,7 +56,6 @@
   color: rgba(0, 0, 0, 0.4);
   font-size: 15px;
   line-height: 17.5px;
-  align-self: center;
 }
 
 .time {
