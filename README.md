@@ -9,7 +9,7 @@ git clone https://github.com/SergeyKazarinov/chat.git
 
 2. Перейти в папку с проектом и установить зависимости в проекте
 ``` bash
-cd name folder
+cd chat
 npm install
 ```
 
