@@ -8,8 +8,8 @@ const Form:React.FC = () => {
         <div className={form.formatting}>
           
         </div>
-        <input type="text" name="name" className={`${form.input} ${form.inputName}`} placeholder="Имя"></input>
-        <textarea name="message" className={`${form.input} ${form.inputMessage}`} placeholder="Сообщение" ></textarea>
+        <input type="text" name="name" className={`${form.input} ${form.inputName}`} placeholder="Имя" required></input>
+        <textarea name="message" className={`${form.input} ${form.inputMessage}`} placeholder="Сообщение" required></textarea>
         <button type="button" className={form.button}></button>
       </fieldset>
     </form>

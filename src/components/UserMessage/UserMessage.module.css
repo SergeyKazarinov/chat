@@ -1,0 +1,87 @@
+.container {
+  width: 235px;
+  height: 64px;
+  display: flex;
+  align-self: flex-end;
+  gap: 4px;
+  align-items: flex-end;
+  border: 1px solid red;
+  margin-right: 20px;
+  margin-top: 57px;
+}
+
+.message {
+  width: 201px;
+  height: 64px;
+  background: #eaf3fa;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+/* 
+.message::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  box-shadow: 15px 18px #000;
+} */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 34px;
+  height: 31px;
+}
+
+.name {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 10px;
+  line-height: 12px;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+.answer {
+  border: none;
+  background-color: #00000000;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 10px;
+  line-height: 12px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.message:hover .answer {
+  opacity: 1;
+}
+
+.answer:hover {
+  text-decoration: underline;
+}
+
+.text {
+  margin: 8px 10px 3px 10px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+  line-height: 17.5px;
+  align-self: center;
+}
+
+.time {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 10px;
+  line-height: 11.2px;
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-bottom: 6px;
+}
