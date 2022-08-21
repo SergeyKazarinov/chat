@@ -1,0 +1,35 @@
+.container {
+  box-sizing: border-box;
+  margin: 18px 10px 0 19px;
+  width: 235px;
+  text-overflow: ellipsis;
+}
+
+.messageContainer {
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-left: 17px;
+  padding-left: 4px;
+  border-left: 0.5px double #999999;
+  border-width: 6px;
+  max-height: 30px;
+  width: 175px;
+}
+
+.name {
+  font-size: 10px;
+  line-height: 11.7px;
+  font-weight: 400;
+  color: #00000040;
+}
+
+.text {
+  width: 165px;
+  font-size: 14px;
+  line-height: 12.5px;
+  font-weight: 400;
+  color: #00000040;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

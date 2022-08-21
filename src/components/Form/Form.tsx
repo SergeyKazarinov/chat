@@ -3,7 +3,7 @@ import form from './Form.module.css';
 import reducer from "../../reduser";
 import Answer from "../Answer/Answer";
 
-const Form:React.FC<any> = ({submitClick, isAnswer, message,onCloseClick}) => {
+const Form:React.FC<any> = ({submitClick, isAnswer, message, onCloseClick, resetAnswerMessage}) => {
   const date = new Date();
   const [name, setName] = useState('');
   const [text, setText] = useState('');
@@ -20,12 +20,16 @@ const Form:React.FC<any> = ({submitClick, isAnswer, message,onCloseClick}) => {
       isOwn: true,
       name,
       text: (Boolean(state.count) ? state.count : text),
-      time: `${date.getHours()}:${date.getMinutes()}`
+      time: `${date.getHours()}:${date.getMinutes()}`,
+      answerName: message.name,
+      answerText: message.text,
     });
     setName('')
     setText('')
     dispatch({type: 'reset', payload: ''})
     resetAllButton();
+    onCloseClick();
+    resetAnswerMessage();
   }
 
 

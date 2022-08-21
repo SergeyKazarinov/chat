@@ -22,12 +22,17 @@ const Display:React.FC = () => {
   const handleCloseAnswerMessage = ():void => {
     setIsAnswer(false);
   }
+
+  const handleResetAnswerMessage = ():void => {
+    setAnswerMessage({});
+  }
+
   return(
     <CurrentMessageContext.Provider value={messages}>
     <div className={display.container}>
       <div className={display.display}>
-        <Messages answerClick={handleAnswerClick} isAnswer={isAnswer}/>
-        <Form submitClick={handleSubmitMessage} isAnswer={isAnswer} message={answerMessage} onCloseClick={handleCloseAnswerMessage}/>
+        <Messages answerClick={handleAnswerClick} isAnswer={isAnswer} message={answerMessage}/>
+        <Form submitClick={handleSubmitMessage} isAnswer={isAnswer} message={answerMessage} onCloseClick={handleCloseAnswerMessage} resetAnswerMessage={handleResetAnswerMessage}/>
       </div>
     </div>
     </CurrentMessageContext.Provider>

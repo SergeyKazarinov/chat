@@ -7,6 +7,8 @@ type objectMessages = {
   name: string,
   text: string,
   time: string,
+  answerName?: string,
+  answerText?: string,
 }
 
 export const CurrentMessage: Array<objectMessages> = [

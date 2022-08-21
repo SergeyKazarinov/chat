@@ -1,8 +1,6 @@
 .container {
   margin: 17px;
   width: 380px;
-  min-height: 503px;
-  max-height: 589px;
   display: flex;
   flex-direction: column;
   overflow: auto;
