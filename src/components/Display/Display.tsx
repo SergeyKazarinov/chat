@@ -26,7 +26,7 @@ const Display:React.FC = () => {
     <CurrentMessageContext.Provider value={messages}>
     <div className={display.container}>
       <div className={display.display}>
-        <Messages answerClick={handleAnswerClick}/>
+        <Messages answerClick={handleAnswerClick} isAnswer={isAnswer}/>
         <Form submitClick={handleSubmitMessage} isAnswer={isAnswer} message={answerMessage} onCloseClick={handleCloseAnswerMessage}/>
       </div>
     </div>

@@ -4,6 +4,9 @@ p {
 
 .container {
   margin: 18px 10px 0 19px;
+  width: 385px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .flex {
@@ -34,10 +37,13 @@ p {
 }
 
 .messageContainer {
+  box-sizing: border-box;
   margin-left: 27px;
   padding-left: 4px;
   border-left: 0.5px double #999999;
   border-width: 6px;
+  max-height: 30px;
+  width: 385px;
 }
 
 .name {
@@ -48,8 +54,12 @@ p {
 }
 
 .text {
+  width: 305px;
   font-size: 15px;
   line-height: 17.5px;
   font-weight: 400;
   color: #00000040;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
