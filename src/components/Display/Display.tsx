@@ -6,7 +6,7 @@ import {CurrentMessageContext, CurrentMessage} from '../../Context/CurrentMessag
 
 const Display:React.FC = () => {
   const [messages, setMessages] = useState(CurrentMessage);
-  const handleSubmitMessage = (data: {id: number, isOwn: boolean, name: string, text: string, time: string,}): void => {
+  const handleSubmitMessage = (data: {id: number, isOwn: boolean, name: string, text: string, time: string}): void => {
     data.id = messages.length + 1;
     setMessages(messages.concat(data));
   }
