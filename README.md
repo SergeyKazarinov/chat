@@ -1,19 +1,22 @@
+## Быстрый старт
 
-## Быстрый старнт
 <br />
 
 1. Склонировать проект на свой компьютер
-``` bash
+
+```bash
 git clone https://github.com/SergeyKazarinov/chat.git
 ```
 
 2. Перейти в папку с проектом и установить зависимости в проекте
-``` bash
+
+```bash
 cd chat
 npm install
 ```
 
 3. Запустить проект
-``` bash
+
+```bash
 npm start
 ```

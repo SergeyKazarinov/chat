@@ -11,6 +11,7 @@ type messages = {
 }
 
 
+
 const UserMessage: React.FC<{msgs: messages}> = ({msgs}) => {
   return(
     <div className={userMessage.container}>
