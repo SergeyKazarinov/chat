@@ -1,8 +1,9 @@
 import React, { useState, useReducer } from "react";
 import form from './Form.module.css';
 import reducer from "../../reduser";
+import Answer from "../Answer/Answer";
 
-const Form:React.FC<any> = ({submitClick}) => {
+const Form:React.FC<any> = ({submitClick, isAnswer, message,onCloseClick}) => {
   const date = new Date();
   const [name, setName] = useState('');
   const [text, setText] = useState('');
@@ -106,6 +107,7 @@ const Form:React.FC<any> = ({submitClick}) => {
           </div>
           <button type="button" className={`${form.buttonFormatting} ${form.buttonReset}`} onClick={handleResetClick} />
         </div>
+        {isAnswer && <Answer message={message} onCloseClick={onCloseClick}/>}
         <input type="text" name="name" className={`${form.input} ${form.inputName}`} placeholder="Имя" value={name} onChange={handleChangeName} required></input>
         <textarea 
           name="message" 

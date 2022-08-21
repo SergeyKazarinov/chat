@@ -12,14 +12,18 @@ type messages = {
 
 
 
-const UserMessage: React.FC<{msgs: messages}> = ({msgs}) => {
+const UserMessage: React.FC<{msgs: messages, answerClick: any}> = ({msgs, answerClick}) => {
+  function handleClick():void {
+    answerClick(msgs)
+  }
+
   return(
     <div className={userMessage.container}>
       <img className={userMessage.icon} src={icon} />
       <div className={userMessage.message}>
         <div className={userMessage.flex}>
           <span className={userMessage.name}>{msgs.name}</span>
-          <button type="button" className={userMessage.answer}>ответить</button>
+          <button type="button" className={userMessage.answer} onClick={handleClick}>ответить</button>
         </div>
         <p className={userMessage.text}>{msgs.text}</p>
         <span className={userMessage.time}>{msgs.time}</span>
