@@ -6,6 +6,7 @@
 .fieldset {
   border: none;
   padding: 0;
+  position: relative;
 }
 
 .formatting {
@@ -95,7 +96,6 @@
   height: 136px;
   margin: 18px 10px 0 10px;
   resize: none;
-  position: relative;
 }
 
 .inputMessage::placeholder {
@@ -109,8 +109,8 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  bottom: 68px;
-  right: 29px;
+  bottom: 12px;
+  right: 18px;
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(37, 142, 195, 0.3);
   border-radius: 7.5px;

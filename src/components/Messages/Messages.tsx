@@ -12,15 +12,15 @@ type itemMessages = {
   time: string,
 }
 
-const Messages:React.FC = () => {
+const Messages:React.FC<{answerClick: object, isAnswer: boolean, message: any}> = ({answerClick, isAnswer, message}) => {
   const messageContext = useContext(CurrentMessageContext);
 
   return(
-    <div className={messages.container}>
+    <div className={messages.container} style={isAnswer ? {height: "513.5px"} : {height: "589px"} }>
       {messageContext.map((item: itemMessages, index: number) => (
         item.isOwn == true
-        ? <UserMessage  key={index} msgs={item}/>
-        : <OtherMessage key={index} msgs={item}/>
+        ? <UserMessage  key={index} msgs={item} answerClick={answerClick} message={message} isAnswer={isAnswer}/>
+        : <OtherMessage key={index} msgs={item} answerClick={answerClick}/>
       ))}
     </div>
   )
